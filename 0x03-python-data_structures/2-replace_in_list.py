@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def replace_in_list(my_list, idx, element):
     count = len(my_list)
-    if idx < 0 and n < idx:
+    if idx < 0 and count < idx:
         return my_list
     for n in range(count):
         if idx == n:

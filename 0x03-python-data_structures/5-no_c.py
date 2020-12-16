@@ -7,3 +7,4 @@ def no_c(my_string):
                 continue
             new = new + i
         return new
+    return my_string

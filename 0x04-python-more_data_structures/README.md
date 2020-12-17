@@ -6,7 +6,9 @@ Dictionaries are sometimes found in other languages as associative memories or a
 Python also includes a data type for sets. A set is an unordered collection with no duplicate elements. Basic uses include membership testing and eliminating duplicate entries. Set objects also support mathematical operations like union, intersection, difference, and symmetric difference.
 ### Set syntax
 Create with curly brackets {} or set() function
+
 Here is a brief demonstration:
+
      >>> x = {"a", "b", "c", "d", "a", "b"}
      >>> print(x)
      {"a", "b", "c", "d"}

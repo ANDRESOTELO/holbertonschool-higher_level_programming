@@ -3,11 +3,11 @@
 
 Syntax errors, also known as parsing errors, are perhaps the most common kind of complaint you get while you are still learning Python:
 
->>> while True print('Hello world')
-  File "<stdin>", line 1, in ?
-    while True print('Hello world')
+       >>> while True print('Hello world')
+       File "<stdin>", line 1, in ?
+       while True print('Hello world')
                    ^
-SyntaxError: invalid syntax
+	SyntaxError: invalid syntax
 
 ## Exceptions
 

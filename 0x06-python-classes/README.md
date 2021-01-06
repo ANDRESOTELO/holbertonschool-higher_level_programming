@@ -13,9 +13,9 @@ The simplest class possible is shown in the following example:
 ## Methods
 We have already discussed that classes/objects can have methods just like functions except that we have an extra self variable.
 
-   class Person:
-   	 def say_hi(self):
-	      print('Hello, how are you?')
+   	class Person:
+   	      def say_hi(self):
+	      	  print('Hello, how are you?')
 
    p = Person()
    p.say_hi()

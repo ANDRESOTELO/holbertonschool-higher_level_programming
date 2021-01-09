@@ -1,0 +1,95 @@
+The ``0-add_integer`` module
+======================
+
+Using ``add_integer``
+
+======================
+
+This is a text file test. First import
+``add_integer`` from the ``0-add_integer`` module:
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+======================
+
+There are the cases:
+
+Normal cases:
+
+    >>> add_integer(1, 2)
+    3
+
+    >>> add_integer(100, 105)
+    205
+
+    >>> add_integer(5)
+    103
+
+    >>> add_integer(100)
+    198
+
+Negative numbers:
+
+    >>> add_integer(100, -2)
+    98
+
+    >>> add_integer(100.3, -2)
+    98
+
+    >>> add_integer(-90, -8)
+    -98
+
+    >>> add_integer(-90, 8)
+    -82
+
+Float Numbers:
+
+    >>> add_integer(100.3, -2)
+    98
+
+    >>> add_integer(20.8, 100)
+    120
+
+    >>> add_integer(1.8)
+    99
+
+Edge cases:
+
+a or b are not int:
+
+    >>> add_integer(4, "school")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+    >>> add_integer('s', 1)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+If arguments are empty:
+
+    >>> add_integer()
+    Traceback (most recent call last):
+    ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+
+If arguments are too much:
+
+    >>> add_integer(2, 2, 2)
+    Traceback (most recent call last):
+    ...
+    TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
+If have an infinity float:
+
+   >>> add_integer(float('inf'), 9)
+   Traceback (most recent call last):
+   ...
+   OverflowError: cannot convert float infinity to integer
+
+If an argument are list:
+   >>> add_integer([7, 8, 12], 9)
+   Traceback (most recent call last):
+   ...
+   TypeError: a must be an integer

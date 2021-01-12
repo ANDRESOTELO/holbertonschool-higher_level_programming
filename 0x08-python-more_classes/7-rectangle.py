@@ -6,6 +6,7 @@ class Rectangle:
     """Rectangle class"""
 
     number_of_instances = 0
+    print_symbol = '#'
 
     def __init__(self, width=0, height=0):
         """Initialization"""
@@ -75,7 +76,7 @@ class Rectangle:
         else:
             for row in range(self.__height):
                 for item in range(self.__width):
-                    hash_str += '#'
+                    hash_str += str(self.print_symbol)
                 hash_str += '\n'
             return hash_str[0:-1]
 

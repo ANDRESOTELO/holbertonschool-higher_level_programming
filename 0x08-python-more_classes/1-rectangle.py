@@ -22,7 +22,6 @@ class Rectangle:
         else:
             self.__width = width
 
-        
     @property
     def height(self):
         """Get height value"""

@@ -11,9 +11,19 @@ This is a text file test. First import the class
     >>> MyList = __import__('1-my_list').MyList
 
 ======================
+DOCSTRING
+======================
+check class docstring:
+    >>> MyList.__doc__ != None
+    True
 
-There are the cases:
+Checking docstring mod:
+    >>> __import__('1-my_list').__doc__ != None
+    True
 
+======================
+TEST 
+======================
 Normal cases:
 
     >>> my_list = MyList()

@@ -110,10 +110,10 @@ class Rectangle(Base):
     def display(self):
         '''Public method that prints in stdout the Rectangle
         instance with character "#"'''
-        for row in range(self.__height):
-            for i in range(self.__width):
-                print('#', end='')
+        for row_space in range(self.__y):
             print()
+        for row in range(self.__height):
+            print('{}{}'.format(' '*self.__x, '#'*self.__width))
 
     def __str__(self):
         '''Method that override the __str__ method and

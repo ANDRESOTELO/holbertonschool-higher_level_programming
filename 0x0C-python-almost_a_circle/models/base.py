@@ -77,13 +77,18 @@ class Base:
     @classmethod
     def load_from_file(cls):
         '''Class method that returns a list of isntances'''
+        # with cls.__name__ obtains class name
         filename = "{:s}.json".format(cls.__name__)
         new_list = []
+        # first open and read file
         with open(filename, 'r') as f:
+            # file doesn´t exist return empty list
             if not f:
                 return new_list
             else:
+                # variable read_file
                 read_file = Base.from_json_string(f.read())
+            # iterates read_file
             for dictionary in read_file:
                 new_list.append(cls.create(**dictionary))
             return new_list

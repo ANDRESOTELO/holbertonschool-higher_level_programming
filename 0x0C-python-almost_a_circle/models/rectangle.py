@@ -121,3 +121,26 @@ class Rectangle(Base):
         str_overriding = '[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}'
         return (str_overriding.format(self.id, self.__x,
                                       self.__y, self.__width, self.__height))
+
+    def update(self, *args, **kwargs):
+        '''Public method that assigns an argument to each attribute
+        **kwargs assigns key/value arguments to attributes'''
+        # object to update with setattr()
+        to_update = ['id', 'width', 'height', 'x', 'y']
+
+        if args:
+            for i in range(len(args)):
+                # setattr() sets the value of the attribute of an object
+                # the sintax is setattr(objetc, name, value)
+                setattr(self, to_update[i], args[i])
+        if kwargs:
+            for key in kwargs:
+                setattr(self, key, kwargs[key])
+
+    def to_dictionary(self):
+        '''Public method that returns the dictionary
+        representation of a Rectangle'''
+        atributes_dict = {'id': self.id, 'width': self.__width,
+                          'height': self.__height, 'x': self.__x,
+                          'y': self.__y}
+        return atributes_dict

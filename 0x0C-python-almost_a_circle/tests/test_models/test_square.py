@@ -183,6 +183,14 @@ class TestSquare(unittest.TestCase):
         test_1.update(10, size=5)
         self.assertEqual(test_1.__str__(), "[Square] (10) 1/1 - 5")
 
+    def test_dictionary(self):
+        '''
+        Test dictinary
+        '''
+        dic = {'id': 10, 'x': 10, 'size': 10, 'y': 10}
+        s1 = Square(10, 10, 10, 10)
+        self.assertEqual(dic, s1.to_dictionary())
+
     def tearDown(self):
         '''
         Reset counter _nb_objects

@@ -37,7 +37,7 @@ class Base:
         filename = "{:s}.json".format(cls.__name__)
 
         # If list_objs is empty
-        if bool(list_objs) is False:
+        if list_objs is None:
             new_list = []
         else:
             new_list = []

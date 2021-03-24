@@ -1,4 +1,4 @@
-#!/us/bin/node
+#!/usr/bin/node
 
 const SquareSuper = require('./5-square');
 

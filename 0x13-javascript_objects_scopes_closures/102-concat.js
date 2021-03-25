@@ -1,5 +1,5 @@
 #!/usr/bin/node
-
+/* The fs module of Node.js implements the File I/O operation */
 /* fs.readFileSync() method */
 /* inbuilt application programming interface of fs module which is used to read the file and return its content */
 

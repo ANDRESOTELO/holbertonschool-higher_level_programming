@@ -6,12 +6,13 @@ from model_state import Base, State
 from sqlalchemy.orm import Session
 from sys import argv
 
-'''Variables'''
-user_name = argv[1]
-password = argv[2]
-data_base = argv[3]
 
 if __name__ == "__main__":
+
+    user_name = argv[1]
+    password = argv[2]
+    data_base = argv[3]
+
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
                            .format(user_name, password, data_base),
                            pool_pre_ping=True)

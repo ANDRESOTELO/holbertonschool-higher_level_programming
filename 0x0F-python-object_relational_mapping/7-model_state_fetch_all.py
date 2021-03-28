@@ -12,7 +12,7 @@ password = argv[2]
 data_base = argv[3]
 
 if __name__ == "__main__":
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
                            .format(user_name, password, data_base),
                            pool_pre_ping=True)
 

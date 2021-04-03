@@ -23,8 +23,9 @@ if __name__ == "__main__":
 
     session = Session(engine)
 
-    query = session.query(State, City).filter(State.id == City.state_id)
-    .order_by(City.id).all()
+    query = (session.query(State, City)
+             .filter(State.id == City.state_id)
+             .order_by(City.id).all())
 
     for data in query:
         print("{}: ({}) {}"

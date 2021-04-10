@@ -14,13 +14,13 @@ if __name__ == '__main__':
     try:
         url = sys.argv[1]
         # Data dictionary
-        header = {'email': sys.argv[2]}
+        value = {'email': sys.argv[2]}
 
-        data = parse.urlencode(header).encode()
+        data = parse.urlencode(value).encode('utf8')
 
         # if data != null reference to method POST
-        with request.urlopen(url, data=data) as response:
-            print(response.read().decode('utf-8'))
-
+        with request.urlopen(url, data) as response:
+            print(response.read().decode('utf8'))
+        print('Your email is: '.format(sys.argv[2]))
     except:
         pass

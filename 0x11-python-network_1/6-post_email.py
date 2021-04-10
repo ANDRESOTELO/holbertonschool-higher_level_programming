@@ -11,6 +11,8 @@ import sys
 
 if __name__ == '__main__':
 
-    values = {'email': sys.argv[2]}
-    r = requests.post(sys.argv[1], data=values)
+    url = sys.argv[1]
+    email = sys.argv[2]
+    values = {'email': email}
+    r = requests.post(url, data=values)
     print(r.text)

@@ -16,4 +16,3 @@ if __name__ == '__main__':
             print(response.info()['X-Request-Id'])
     except:
         pass
-

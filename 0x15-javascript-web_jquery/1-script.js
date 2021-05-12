@@ -1,2 +1,2 @@
 // Using jQuery to change text color in <header> tag
-$('header').css('color', '#F00000');
+$('header').css('color', '#FF0000');
